@@ -38,7 +38,7 @@ func pingSite(site string) {
 	cmd.Stderr = &cmdErr
 	err := cmd.Run()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 	cmdStdout := ConvertByte2String([]byte(cmdOut.String()), "GB18030")
 	cmdStderr := ConvertByte2String([]byte(cmdErr.String()), "GB18030")
